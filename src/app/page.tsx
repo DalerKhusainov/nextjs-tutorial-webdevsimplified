@@ -17,9 +17,9 @@ const Home = async () => {
   // GETTING todos FROM PRISMA
   const todos = await getTodos();
 
-  //
+  // FUNC FOR UPDATING A todo TASK
   const toggleTodo = async (id: string, complete: boolean) => {
-    //
+    // SPECIAL FLAG FOR USING AN API
     "use server";
     // UPDATING A CURRENT todo ITEM IN PRISMA DATA BASE
     await prisma.todo.update({ where: { id }, data: { complete } });
